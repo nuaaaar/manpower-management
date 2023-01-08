@@ -20,7 +20,7 @@ class CreateUptOrganizationalStructuresTable extends Migration
             $table->string('name');
             $table->string('position');
             $table->longText('description')->nullable();
-            $table->text('avatar')->default('/app-assets/images/profile/user-uploads/user.jpg');
+            $table->text('avatar')->nullable();
             $table->timestamps();
 
             $table->foreign('upt_id')->references('id')->on('upts')->onDelete('cascade');
