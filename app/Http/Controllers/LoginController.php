@@ -19,7 +19,7 @@ class LoginController extends Controller
 
         if ($user == null)
         {
-            return redirect()->back()->with('ERR', 'Email tidak terdaftar');
+            return redirect()->back()->with('ERR', 'Username atau email tidak terdaftar');
         }
 
         if ($user->status == 'non-aktif')
