@@ -373,6 +373,19 @@
             });
         }
 
+        if ($('.disable-space')[0])
+        {
+            $('.disable-space').on({
+                keydown: function(e) {
+                    if (e.which === 32)
+                    return false;
+                },
+                change: function() {
+                    this.value = this.value.replace(/\s/g, "");
+                }
+            });
+        }
+
         function number_format (number, decimals, dec_point, thousands_sep) {
             number = (number + '').replace(/[^0-9+\-Ee.]/g, '');
             var n = !isFinite(+number) ? 0 : +number,

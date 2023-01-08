@@ -74,8 +74,8 @@
                                             <form action="{{ route('login') }}" method="POST" class="mb-2">
                                                 @csrf
                                                 <div class="form-group mb-50">
-                                                    <label class="text-bold-600" for="email">Alamat Email</label>
-                                                    <input type="text" name="email" class="form-control" id="email" placeholder="Alamat Email"></div>
+                                                    <label class="text-bold-600" for="email">Username atau Email</label>
+                                                    <input type="text" name="username" class="form-control" id="email" placeholder="Username atau Email"></div>
                                                 <div class="form-group mb-2">
                                                     <label class="text-bold-600" for="password">Kata Sandi</label>
                                                     <input type="password" name="password" class="form-control" id="password" placeholder="***********">

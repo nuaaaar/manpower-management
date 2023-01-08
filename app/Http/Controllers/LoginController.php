@@ -15,7 +15,7 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        $user = User::where('email', $request->email)->first();
+        $user = User::where('email', $request->username)->orWhere('username', $request->username)->first();
 
         if ($user == null)
         {
@@ -27,7 +27,7 @@ class LoginController extends Controller
             return redirect()->back()->with('ERR', 'Akun Anda di non-aktifkan, silahkan hubungi admin untuk mengaktifkan kembali akun Anda');
         }
 
-        if (!Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+        if (!Auth::attempt(['email' => $user->email, 'password' => $request->password])) {
             return redirect()->back()->with('ERR', 'Password salah');
         }
 

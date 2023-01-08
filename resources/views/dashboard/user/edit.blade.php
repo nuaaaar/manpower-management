@@ -16,9 +16,19 @@
                         <form action="{{ route('dashboard.petugas.update', $user->id) }}" method="post">
                             @csrf
                             @method("PUT")
-                            <div class="form-group">
-                                <label for="">NAMA</label>
-                                <input name="name" type="text" class="form-control" placeholder="cth: John Doe" value="{{ $user->name }}" required>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">NAMA</label>
+                                        <input name="name" type="text" class="form-control" placeholder="cth: John Doe" value="{{ $user->name }}" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">USERNAME</label>
+                                        <input name="username" type="text" class="form-control disable-space" placeholder="cth: john11" value="{{ $user->username }}" required>
+                                    </div>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
@@ -200,8 +210,41 @@
                                             </td>
                                             <td class="text-center">
                                                 <div class="checkbox">
-                                                    <input name="permissions[]" type="checkbox" id="upt-checkbox5" class="checkbox-input" disabled>
-                                                    <label for="upt-checkbox5"></label>
+                                                    <input name="permissions[]" type="checkbox" id="user-location-checkbox5" class="checkbox-input" disabled>
+                                                    <label for="user-location-checkbox5"></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>PENCARIAN</td>
+                                            <td class="text-center">
+                                                <div class="checkbox">
+                                                    <input name="permissions[]" type="checkbox" id="search-checkbox1" class="checkbox-input" disabled>
+                                                    <label for="search-checkbox1"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="checkbox">
+                                                    <input name="permissions[]" type="checkbox" id="search-checkbox2" class="checkbox-input" value="search_read">
+                                                    <label for="search-checkbox2"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="checkbox">
+                                                    <input name="permissions[]" type="checkbox" id="search-checkbox3" class="checkbox-input" disabled>
+                                                    <label for="search-checkbox3"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="checkbox">
+                                                    <input name="permissions[]" type="checkbox" id="search-checkbox4" class="checkbox-input" disabled>
+                                                    <label for="search-checkbox4"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="checkbox">
+                                                    <input name="permissions[]" type="checkbox" id="search-checkbox5" class="checkbox-input" disabled>
+                                                    <label for="search-checkbox5"></label>
                                                 </div>
                                             </td>
                                         </tr>

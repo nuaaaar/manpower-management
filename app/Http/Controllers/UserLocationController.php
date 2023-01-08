@@ -11,7 +11,7 @@ class UserLocationController extends Controller
     public function index()
     {
         $userPermissions = Auth::user()->user_permissions->pluck('permission')->toArray();
-        if (!in_array('user_read', $userPermissions)) {
+        if (!in_array('user_location_read', $userPermissions)) {
             return abort(404);
         }
         $data['title'] = 'Lokasi Petugas';

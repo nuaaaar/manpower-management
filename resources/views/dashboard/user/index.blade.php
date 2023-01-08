@@ -44,7 +44,7 @@
                         <div class="tab-content pt-1">
                             @foreach ($roles as $key => $role)
                                 <div class="tab-pane {{ $key == 0 ? 'active' : '' }}" id="{{ str_replace(' ', '-', $role->name) }}" role="tabpanel" aria-labelledby="{{ str_replace(' ', '-', $role->name) }}-label">
-                                    <table class="table datatable w-100 table-responsive d-lg-table">
+                                    <table class="table datatable w-100 table-responsive">
                                         <thead>
                                             <tr>
                                                 <th>NO</th>
