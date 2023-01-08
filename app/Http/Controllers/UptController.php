@@ -15,7 +15,7 @@ class UptController extends Controller
             return abort(404);
         }
         $data['title'] = 'UPT';
-        $data['upts'] = Upt::where('name', 'LIKE', '%'.$request->search.'%')->orWhere('description', 'LIKE', '%'.$request->search.'%')->orderBy('name')->get();
+        $data['upts'] = Upt::where('name', 'LIKE', '%'.$request->search.'%')->orWhere('description', 'LIKE', '%'.$request->search.'%')->orderBy('name')->paginate(5);
 
         return view('dashboard.upt.index', $data);
     }

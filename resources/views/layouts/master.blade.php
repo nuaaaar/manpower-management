@@ -154,7 +154,6 @@
                         <span class="menu-title text-truncate">BERANDA</span>
                     </a>
                 </li>
-
                 @if (in_array('user_activity_read', $userPermissions))
                     <li class="nav-item">
                         <a href="{{ route('dashboard.laporan-aktivitas.index') }}">
@@ -195,26 +194,6 @@
                         </a>
                     </li>
                 @endif
-                    {{-- <li class="nav-item has-sub">
-                    <a href="javascript:;">
-                        <i class="menu-livicon livicon-evo-holder" data-icon="notebook" style="visibility: visible; width: 60px;"> </i>
-                        <span class="menu-title text-truncate">SIM</span>
-                    </a>
-                    <ul class="menu-content">
-                        <li class="">
-                            <a class="d-flex align-items-center" href="javascript:;">
-                                <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate">Input Data</span>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a class="d-flex align-items-center" href="javascript:;">
-                                <i class="bx bx-right-arrow-alt"></i>
-                                <span class="menu-item text-truncate">Laporan</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li> --}}
             </ul>
         </div>
     </div>

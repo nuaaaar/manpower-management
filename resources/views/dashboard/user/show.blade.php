@@ -251,7 +251,6 @@
             <div class="card mb-0">
                 <div class="card-content collapse show">
                     <div class="card-body text-center">
-                        <img src="/app-assets/images/user-activity/total-aktivitas.png" class="img-fluid w-50">
                         <p>Total Aktivitas</p>
                         <h1 class="text-primary">{{ count($activities) }}</h1>
                     </div>
@@ -262,7 +261,6 @@
             <div class="card mb-0">
                 <div class="card-content collapse show">
                     <div class="card-body text-center">
-                        <img src="/app-assets/images/user-activity/total-jam-kerja.png" class="img-fluid w-50">
                         <p>Total Jam Kerja</p>
                         <h1 class="text-warning">{{ $activities->sum('diff_in_hours') }}</h1>
                     </div>

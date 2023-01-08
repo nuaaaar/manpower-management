@@ -16,7 +16,7 @@
                     <!-- input search -->
                     <form>
                         <fieldset class="page-search-input form-group position-relative">
-                            <input name="search" type="text" class="form-control rounded-right form-control-lg shadow pl-2" id="searchbar" placeholder="Search">
+                            <input name="search" type="text" class="form-control rounded-right form-control-lg shadow pl-2" id="searchbar" placeholder="Search" value="{{ request()->search }}">
                             <button class="btn btn-primary search-btn rounded" type="submit">
                                 <i class="bx bx-search align-middle"></i>
                                 <span class="d-none d-sm-inline-block align-middle">Search</span>

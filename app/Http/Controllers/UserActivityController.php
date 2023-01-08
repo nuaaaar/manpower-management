@@ -84,10 +84,10 @@ class UserActivityController extends Controller
                 'name' => 'Laporan Aktivitas'
             ]
         ];
-        $isAllowedFullData = empty(Auth::user()->user_permissions->where('permission', 'user_activity_fulldata')->first());
+        $isAllowedFullData = Auth::user()->user_permissions->where('permission', 'user_activity_fulldata')->first();
         $data['users'] = User::where(function($q) use($isAllowedFullData)
         {
-            if (!$isAllowedFullData) {
+            if ($isAllowedFullData == null) {
                 $q->where('id', Auth::user()->id);
             }
         })->get();
